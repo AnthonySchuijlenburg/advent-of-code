@@ -1,0 +1,10 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "A project with my solutions for Advent Of Code",
+  "scripts": {},
+  "author": "AnthonySchuijlenburg",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
