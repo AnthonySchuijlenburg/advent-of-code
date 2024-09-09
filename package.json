@@ -1,10 +1,25 @@
 {
-  "name": "advent-of-code",
-  "version": "1.0.0",
-  "description": "A project with my solutions for Advent Of Code",
-  "scripts": {},
-  "author": "AnthonySchuijlenburg",
-  "devDependencies": {
-    "typescript": "^5.5.4"
-  }
+    "name": "advent-of-code",
+    "version": "1.0.0",
+    "description": "A project with my solutions for Advent Of Code",
+    "scripts": {
+        "lint:prettier": "prettier --check .",
+        "lint:js": "eslint 'src/**/*.{ts,tsx}'",
+        "lint": "npm run lint:prettier && npm run lint:js",
+        "fix": "prettier --write --list-different . && npm run lint:js -- --fix"
+    },
+    "author": "AnthonySchuijlenburg",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^8.4.0",
+        "@typescript-eslint/parser": "^8.4.0",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.30.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-promise": "^7.1.0",
+        "eslint-plugin-react": "^7.35.2",
+        "prettier": "^3.3.3",
+        "typescript": "^5.5.4"
+    }
 }
