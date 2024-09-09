@@ -23,28 +23,6 @@ describe('BathroomSecurity:Part one', () => {
     });
 });
 
-describe('BathroomSecurity:Part Two', () => {
-    it('no directions', () => {
-        const result = partTwo(['']);
-        expect(result).toBe('5');
-    });
-
-    it('one direction', () => {
-        const result = partTwo(['U']);
-        expect(result).toBe('5');
-    });
-
-    it('multiple single digit directions', () => {
-        const result = partTwo(['ULL']);
-        expect(result).toBe('5');
-    });
-
-    it('multiple multi digit directions', () => {
-        const result = partTwo(['ULL', 'RRDDD', 'LURDL', 'UUUUD']);
-        expect(result).toBe('5DB3');
-    });
-});
-
 describe('BathroomSecurity:Find Next Key', () => {
     it('should return 2 on a U from a 5', () => {
         const result = findNextKey(5, 'U');
@@ -79,5 +57,27 @@ describe('BathroomSecurity:Find Next Key', () => {
     it('should return 4 on a U from a 7', () => {
         const result = findNextKey(7, 'U');
         expect(result).toBe(4);
+    });
+});
+
+describe('BathroomSecurity:Part Two', () => {
+    it('no directions', () => {
+        const result = partTwo(['']);
+        expect(result).toBe('5');
+    });
+
+    it('one direction', () => {
+        const result = partTwo(['U']);
+        expect(result).toBe('5');
+    });
+
+    it('multiple single digit directions', () => {
+        const result = partTwo(['ULL']);
+        expect(result).toBe('5');
+    });
+
+    it('multiple multi digit directions', () => {
+        const result = partTwo(['ULL', 'RRDDD', 'LURDL', 'UUUUD']);
+        expect(result).toBe('5DB3');
     });
 });
