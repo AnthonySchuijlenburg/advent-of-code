@@ -1,4 +1,16 @@
-// sample file
-console.log('Trebuchet Calibration');
+export function partOne(): number {
+    console.log('Part One');
+    return 1;
+}
 
-console.log('Trebuchet is calibrated');
+export function partTwo(): number {
+    console.log('Part Two');
+    return 2;
+}
+
+function main() {
+    partOne();
+    partTwo();
+}
+
+main();

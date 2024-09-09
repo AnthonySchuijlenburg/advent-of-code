@@ -2,7 +2,10 @@
     "name": "advent-of-code",
     "version": "1.0.0",
     "description": "A project with my solutions for Advent Of Code",
+    "type": "module",
     "scripts": {
+        "build" : "tsc",
+        "test": "vitest",
         "lint:prettier": "prettier --check .",
         "lint:js": "eslint 'src/**/*.{ts,tsx}'",
         "lint": "npm run lint:prettier && npm run lint:js",
@@ -20,6 +23,7 @@
         "eslint-plugin-promise": "^7.1.0",
         "eslint-plugin-react": "^7.35.2",
         "prettier": "^3.3.3",
-        "typescript": "^5.5.4"
+        "typescript": "^5.5.4",
+        "vitest": "^2.0.5"
     }
 }
