@@ -69,4 +69,8 @@ function main() {
     console.log(`The result of part two is: ${possibleVerticalTriangles}`);
 }
 
-main();
+if (process.env.NODE_ENV !== 'test') {
+    // Only run the main function when not in testing,
+    // to speed up pipelines
+    main();
+}
