@@ -1,4 +1,4 @@
-name: Check build
+name: Build
 on:
     push:
         branches: ['main']
@@ -7,7 +7,23 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
             - run: |
                   npm install
                   npm run build
+
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: |
+                  npm install
+                  npm run lint
+
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: |
+                  npm install
+                  npm run test
