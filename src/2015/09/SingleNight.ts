@@ -1,4 +1,5 @@
 import { getFileContent } from '../../helpers/ReadFromFile.ts';
+import { getPermutations } from '../../helpers/ArrayPermutations.js';
 
 interface Cities {
     [key: string]: {
@@ -62,23 +63,6 @@ function getCitiesMap(distances: string[]): Cities {
     }
 
     return cities;
-}
-
-function getPermutations(array: string[]): string[][] {
-    if (array.length === 0) {
-        return [[]];
-    }
-    const result: string[][] = [];
-
-    array.forEach((element, index) => {
-        const rest = [...array.slice(0, index), ...array.slice(index + 1)];
-        const permutationsOfRest = getPermutations(rest);
-        permutationsOfRest.forEach((permutation) => {
-            result.push([element, ...permutation]);
-        });
-    });
-
-    return result;
 }
 
 function main() {
