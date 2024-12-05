@@ -1,8 +1,8 @@
-export function getPermutations(array: string[]): string[][] {
+export function getPermutations<T>(array: T[]): T[][] {
     if (array.length === 0) {
         return [[]];
     }
-    const result: string[][] = [];
+    const result: T[][] = [];
 
     array.forEach((element, index) => {
         const rest = [...array.slice(0, index), ...array.slice(index + 1)];
